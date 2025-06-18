@@ -27,11 +27,17 @@ diceSelector.addEventListener("change", () => {
 });
 
 randomDiceButton.addEventListener("click", () => {
-  let diceRoll = randomNumber(diceSelector.value);
+  let diceRoll = randomNumber(Number(diceSelector.value));
+
+  if (diceRoll == 1) {
+    return;
+  }
 
   while (diceRoll == Number(diceResult.textContent)) {
-    diceRoll = randomNumber(diceSelector.value);
+    diceRoll = randomNumber(Number(diceSelector.value));
   }
+
+  // console.log(diceRoll);
 
   diceResult.textContent = diceRoll;
 });
