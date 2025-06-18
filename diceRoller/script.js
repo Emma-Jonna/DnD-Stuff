@@ -29,9 +29,9 @@ diceSelector.addEventListener("change", () => {
 randomDiceButton.addEventListener("click", () => {
   let diceRoll = randomNumber(diceSelector.value);
 
-  while (diceRoll == diceResult.textContent) {
+  while (diceRoll == Number(diceResult.textContent)) {
     diceRoll = randomNumber(diceSelector.value);
   }
 
-  diceResult.textContent = randomNumber(diceSelector.value);
+  diceResult.textContent = diceRoll;
 });
