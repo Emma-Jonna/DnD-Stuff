@@ -25,12 +25,6 @@ const randomNumber = (maxNumber) => {
   return Math.floor(Math.random() * maxNumber) + 1;
 };
 
-const randomClass = (listOFClasses) => {
-  const random = randomNumber(listOFClasses);
-
-  return random - 1;
-};
-
 const createDiceOpitions = (listOfDice, selectorElement) => {
   listOfDice.forEach((element) => {
     const diceOption = document.createElement("option");
@@ -43,21 +37,14 @@ const createDiceOpitions = (listOfDice, selectorElement) => {
 };
 
 randomClassButton.addEventListener("click", () => {
-  let classIndex = randomClass(classList.length);
+  let classIndex = randomNumber(classList.length) - 1;
 
   while (classIndex == classResult.value) {
-    classIndex = randomClass(classList.length);
+    classIndex = randomNumber(classList.length) - 1;
   }
 
-  console.log(classList[classIndex]);
   classResult.textContent = classList[classIndex];
   classResult.value = classIndex;
-});
-
-createDiceOpitions(diceList, diceSelector);
-
-diceSelector.addEventListener("change", () => {
-  console.log(diceSelector.value);
 });
 
 randomDiceButton.addEventListener("click", () => {
@@ -65,3 +52,5 @@ randomDiceButton.addEventListener("click", () => {
 
   diceResult.textContent = diceRoll;
 });
+
+createDiceOpitions(diceList, diceSelector);
