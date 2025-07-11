@@ -1,7 +1,7 @@
 # D&D-Stuff ideas
 
 - Random Class
-- Random Species
+- Random Lineage
 - Random Background
 - Random Characteristics
 - Spells
