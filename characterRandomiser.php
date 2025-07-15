@@ -8,6 +8,8 @@
 </head>
 
 <body>
+    <?php include('components/navBar.php') ?>
+
     <main>
         <h2>Random Class</h2>
         <button class="random-class-button">Random Class</button>
@@ -21,4 +23,4 @@
 
 </html>
 
-<script src="script.js"></script>
+<script src="scripts/characterRandomiser.js"></script>

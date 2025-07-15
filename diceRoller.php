@@ -8,6 +8,8 @@
 </head>
 
 <body>
+    <?php include('components/navBar.php') ?>
+
     <main>
         <h2>Dice Roller</h2>
         <label for="dice-selector"></label>
@@ -21,4 +23,4 @@
 
 </html>
 
-<script src="script.js"></script>
+<script src="scripts/diceRoller.js"></script>
