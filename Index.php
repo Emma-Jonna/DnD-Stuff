@@ -10,8 +10,8 @@
 <body>
     <nav>
         <a class="" type="button" href="diceRoller/index.php">Dice Roller</a>
-        <a class="" type="button" href="randomiser/index.php">Randomiser</a>
-        <a class="" type="button" href="characterSheet/index.html">Character Sheet</a>
+        <a class="" type="button" href="characterRandomiser/index.php">Randomiser</a>
+        <a class="" type="button" href="characterSheet/index.php">Character Sheet</a>
     </nav>
     <main>
         this is the home page
