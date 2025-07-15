@@ -10,7 +10,7 @@
 <body>
     <?php include('components/navBar.php') ?>
     <main>
-        this is the home page
+        This is the home page
     </main>
     <footer></footer>
 </body>

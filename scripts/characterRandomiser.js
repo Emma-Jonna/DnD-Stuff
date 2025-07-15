@@ -1,22 +1,101 @@
 const classResult = document.querySelector(".class-result");
 const randomClassButton = document.querySelector(".random-class-button");
+const randomClassIcon = document.querySelector(".random-class-icon");
 const lineageResult = document.querySelector(".lineage-result");
 const randomineageButton = document.querySelector(".random-lineage-button");
 
 const classList = [
-  "Artificer",
-  "Barbarian",
-  "Bard",
-  "Cleric",
-  "Druid",
-  "Fighter",
-  "Monk",
-  "Paladin",
-  "Ranger",
-  "Rouge",
-  "Sorcerer",
-  "Warlock",
-  "Wizard",
+  {
+    name: "Artificer",
+    icons: {
+      2014: "../assets/classIcons/2014/artificer.svg",
+      2024: "../assets/classIcons/2014/artificer.svg",
+    },
+  },
+  {
+    name: "Barbarian",
+    icons: {
+      2014: "../assets/classIcons/2014/barbarian.svg",
+      2024: "../assets/classIcons/2024/barbarian.svg",
+    },
+  },
+  {
+    name: "Bard",
+    icons: {
+      2014: "../assets/classIcons/2014/bard.svg",
+      2024: "../assets/classIcons/2024/bard.svg",
+    },
+  },
+  {
+    name: "Cleric",
+    icons: {
+      2014: "../assets/classIcons/2014/cleric.svg",
+      2024: "../assets/classIcons/2024/cleric.svg",
+    },
+  },
+  {
+    name: "Druid",
+    icons: {
+      2014: "../assets/classIcons/2014/druid.svg",
+      2024: "../assets/classIcons/2024/druid.svg",
+    },
+  },
+  {
+    name: "Fighter",
+    icons: {
+      2014: "../assets/classIcons/2014/fighter.svg",
+      2024: "../assets/classIcons/2024/fighter.svg",
+    },
+  },
+  {
+    name: "Monk",
+    icons: {
+      2014: "../assets/classIcons/2014/monk.svg",
+      2024: "../assets/classIcons/2024/monk.svg",
+    },
+  },
+  {
+    name: "Paladin",
+    icons: {
+      2014: "../assets/classIcons/2014/paladin.svg",
+      2024: "../assets/classIcons/2024/paladin.svg",
+    },
+  },
+  {
+    name: "Ranger",
+    icons: {
+      2014: "../assets/classIcons/2014/ranger.svg",
+      2024: "../assets/classIcons/2024/ranger.svg",
+    },
+  },
+  {
+    name: "Rouge",
+    icons: {
+      2014: "../assets/classIcons/2014/rouge.svg",
+      2024: "../assets/classIcons/2024/rouge.svg",
+    },
+  },
+  {
+    name: "Sorcerer",
+    icons: {
+      2014: "../assets/classIcons/2014/sorcerer.svg",
+      2024: "../assets/classIcons/2024/sorcerer.svg",
+    },
+  },
+  {
+    name: "Warlock",
+    icons: {
+      2014: "../assets/classIcons/2014/warlock.svg",
+      2024: "../assets/classIcons/2024/warlock.svg",
+    },
+  },
+  {
+    name: "Wizard",
+    icons: {
+      2014: "../assets/classIcons/2014/wizard.svg",
+      2024: "../assets/classIcons/2024/wizard.svg",
+    },
+  },
 ];
 const lineages = [
   "Dragonborn",
@@ -53,12 +132,16 @@ const getOneRandomItemFromList = (itemList, elementContainer) => {
     index = randomNumber(itemList.length) - 1;
   }
 
-  elementContainer.textContent = itemList[index];
+  elementContainer.textContent = itemList[index].name;
   elementContainer.value = index;
+
+  return index;
 };
 
 randomClassButton.addEventListener("click", () => {
-  getOneRandomItemFromList(classList, classResult);
+  const classIndex = getOneRandomItemFromList(classList, classResult);
+
+  randomClassIcon.src = classList[classIndex].icons[2014];
 });
 
 randomineageButton.addEventListener("click", () => {

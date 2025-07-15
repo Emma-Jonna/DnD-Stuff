@@ -14,6 +14,7 @@
         <h2>Random Class</h2>
         <button class="random-class-button">Random Class</button>
         <p class="class-result"></p>
+        <img class="random-class-icon" src="" alt="">
 
         <h2>Random Lineage</h2>
         <button class="random-lineage-button">Random Lineage</button>
