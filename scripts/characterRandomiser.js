@@ -1,6 +1,7 @@
 const classResult = document.querySelector(".class-result");
 const randomClassButton = document.querySelector(".random-class-button");
-const randomClassIcon = document.querySelector(".random-class-icon");
+const randomClassIcon2014 = document.querySelector(".random-class-icon-2014");
+const randomClassIcon2024 = document.querySelector(".random-class-icon-2024");
 const lineageResult = document.querySelector(".lineage-result");
 const randomineageButton = document.querySelector(".random-lineage-button");
 
@@ -125,25 +126,28 @@ const randomNumber = (maxNumber) => {
   return Math.floor(Math.random() * maxNumber) + 1;
 };
 
-const getOneRandomItemFromList = (itemList, elementContainer) => {
+const getOneRandomIndexFromList = (itemList, elementContainer) => {
   let index = randomNumber(itemList.length) - 1;
 
   while (index == elementContainer.value) {
     index = randomNumber(itemList.length) - 1;
   }
 
-  elementContainer.textContent = itemList[index].name;
-  elementContainer.value = index;
-
   return index;
 };
 
 randomClassButton.addEventListener("click", () => {
-  const classIndex = getOneRandomItemFromList(classList, classResult);
+  const classIndex = getOneRandomIndexFromList(classList, classResult);
 
-  randomClassIcon.src = classList[classIndex].icons[2014];
+  classResult.textContent = classList[classIndex].name;
+  classResult.value = classIndex;
+  randomClassIcon2014.src = classList[classIndex].icons[2014];
+  randomClassIcon2024.src = classList[classIndex].icons[2024];
 });
 
 randomineageButton.addEventListener("click", () => {
-  getOneRandomItemFromList(lineages, lineageResult);
+  const lineageIndex = getOneRandomIndexFromList(lineages, lineageResult);
+
+  lineageResult.textContent = lineages[lineageIndex];
+  lineageResult.value = lineageIndex;
 });

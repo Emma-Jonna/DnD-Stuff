@@ -11,14 +11,19 @@
     <?php include('components/navBar.php') ?>
 
     <main>
-        <h2>Random Class</h2>
-        <button class="random-class-button">Random Class</button>
-        <p class="class-result"></p>
-        <img class="random-class-icon" src="" alt="">
+        <div>
 
-        <h2>Random Lineage</h2>
-        <button class="random-lineage-button">Random Lineage</button>
-        <p class="lineage-result"></p>
+            <h2>Random Class</h2>
+            <button class="random-class-button">Random Class</button>
+            <p class="class-result"></p>
+            <img class="random-class-icon-2014" src="" alt="">
+            <img class="random-class-icon-2024" src="" alt="">
+        </div>
+        <div>
+            <h2>Random Lineage</h2>
+            <button class="random-lineage-button">Random Lineage</button>
+            <p class="lineage-result"></p>
+        </div>
     </main>
 </body>
 
